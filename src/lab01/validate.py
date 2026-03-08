@@ -38,9 +38,9 @@ def validate_adress(adress) -> str:
     if number <= 0:
         raise ValueError("Номер дома должен быть положительным")
 
-    formatting = f"Улица {street}, дом {number}"
+    street = street.strip()
 
-    return formatting
+    return (street, number)
 
 def validate_rent_logic(for_rent, rent_terms) -> int | None:
     if not isinstance(for_rent, bool):
