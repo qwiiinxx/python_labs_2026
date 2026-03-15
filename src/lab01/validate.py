@@ -40,7 +40,7 @@ def validate_adress(adress) -> str:
 
     street = street.strip()
 
-    return (street, number)
+    return [street, number]
 
 def validate_rent_logic(for_rent, rent_terms) -> int | None:
     if not isinstance(for_rent, bool):
