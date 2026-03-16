@@ -55,11 +55,13 @@ class Agency:
         self._is_active = is_active
     # ПРОВЕРИТЬ В ГПТ!!!!!!
     def tax_price(self, tax: int) -> float:
+        if not self._is_active:
+            raise RuntimeError("Объект неактивен, нельзя рассчитать цену")
         if not isinstance(tax, int):
-            raise ValueError("Налог должен быть целым числом процентов")
+            raise TypeError("Налог должен быть целым числом процентов")
         if tax <= 0:
             raise ValueError("Налог должен быть больше 0")
-        return (self._price * tax) / 100
+        return self._price * (1 + tax / 100)
 
     # мета-методы
     def __str__(self) -> str:

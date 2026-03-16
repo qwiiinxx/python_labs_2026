@@ -19,7 +19,7 @@ def validate_area(area) -> float:
 def validate_adress(adress) -> str:
     
     if not isinstance(adress, list):
-        raise TypeError(f"Адрес должен быть списком типа [Улица, номер]")
+        raise TypeError(f"Адрес должен быть списком типа ['Улица', номер]")
     
     if len(adress) != 2:
         raise ValueError("Адрес должен содержать 2 элемента")
