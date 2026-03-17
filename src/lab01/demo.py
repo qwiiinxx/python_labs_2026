@@ -29,11 +29,11 @@ from model import Agency
 
 
 
-print("=== ПРОВЕРКА ВАЛИДАЦИИ ===")
-try:
-    flat22 = Agency(price=100000000, area=95, adress=("ленина", 10), for_rent=True, rent_terms=1)
-except Exception as e:
-    print("Ошибка:", e)
+# print("=== ПРОВЕРКА ВАЛИДАЦИИ ===")
+# try:
+#     flat22 = Agency(price=100000000, area=95, adress=("ленина", 10), for_rent=True, rent_terms=1)
+# except Exception as e:
+#     print("Ошибка:", e)
 
 
 
