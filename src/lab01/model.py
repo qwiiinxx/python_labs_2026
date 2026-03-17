@@ -96,14 +96,14 @@ class Agency:
         return (
             self._price,
             self._area,
-            self._address,
+            self._adress,
             self._for_rent,
             self._rent_terms,
             self._is_active
         ) == (
             other._price,
             other._area,
-            other._address,
+            other._adress,
             other._for_rent,
             other._rent_terms,
             other._is_active
