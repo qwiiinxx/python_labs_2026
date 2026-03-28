@@ -1,16 +1,13 @@
 from validate import validate_adress, validate_price, validate_area, validate_rent_logic
 
 
-class Agency:
+class Property:
 
     def __init__(self, price: float, area: float, adress: str, for_rent: bool, rent_terms: int | None = None) -> None:
 
         self._price = validate_price(price)
         self._area = validate_area(area)
-        self._adress = validate_adress(adress)
-
-        if not isinstance(for_rent, bool):
-            raise TypeError("Опция аренды должна быть True или False")
+        self._adress = validate_adress(adress) 
 
         self._for_rent = for_rent
         self._rent_terms = validate_rent_logic(for_rent, rent_terms)
@@ -53,7 +50,7 @@ class Agency:
             raise TypeError("Статус должен быть True или False")
         
         self._is_active = is_active
-    # ПРОВЕРИТЬ В ГПТ!!!!!!
+
     def tax_price(self, tax: int) -> float:
         if not self._is_active:
             raise RuntimeError("Объект неактивен, нельзя рассчитать цену")
@@ -90,7 +87,7 @@ class Agency:
         )
 
     def __eq__(self, other: object) -> bool:
-        if not isinstance(other, Agency):
+        if not isinstance(other, Property):
             return NotImplemented
         
         return (
