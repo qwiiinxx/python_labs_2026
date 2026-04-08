@@ -16,13 +16,13 @@ from model import Property
 # print("Активен:", flat1.is_active)
 
 
-# print("=== ППОВЕРКА setter ===")
-# flat1 = Property(price=10000000, area=50, adress=["Ленинский проспект", 10], for_rent=False, rent_terms=None)
-# print("=== БЫЛО ===")
-# print("Цена:", flat1.price)
-# flat1.price = 20000000
-# print("=== СТАЛО ===")
-# print("Цена:", flat1.price)
+print("=== ППОВЕРКА setter ===")
+flat1 = Property(price=10000000, area=50, adress=["Ленинский проспект", 10], for_rent=False, rent_terms=None)
+print("=== БЫЛО ===")
+print("Цена:", flat1.price)
+flat1.price = 20000000
+print("=== СТАЛО ===")
+print("Цена:", flat1.price)
 
 
 # print("=== ПРОВЕРКА АКТИВНОСТИ ===")
