@@ -1,4 +1,3 @@
-from math import isinf
 from lab01.model import Property
 from typing import Iterator
 
@@ -65,10 +64,11 @@ class Agency:
     def __len__(self) -> int:
         return len(self._items)
 
-    #метод поиска объекта по индексу
+    #метод перебора объектов
     def __iter__(self) -> Iterator[Property]:
         return iter(self._items)
 
+    #метод поиска объекта по индексу
     def __getitem__(self, index: int) -> Property:
         return self._items[index]
 
