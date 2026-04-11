@@ -1,4 +1,4 @@
-from validate import validate_adress, validate_price, validate_area, validate_rent_logic
+from src.lab01.validate import validate_adress, validate_price, validate_area, validate_rent_logic
 
 
 class Property:
