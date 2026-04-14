@@ -88,7 +88,6 @@ class PentHouse(Property):
     def __str__(self) -> str:
         part1 = super().__str__()
         part2 = (
-            f"Пентхаус!\n"
         f"Этажей: {self._own_floors}\n"
         f"Комнаты: {self._rooms}\n"
         f"Балкон: {'Да' if self._balcony else 'Нет'}\n"

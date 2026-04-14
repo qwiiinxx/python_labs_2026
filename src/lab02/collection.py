@@ -1,14 +1,6 @@
-from .model import Property
-from lab03.models import Apartment, House, PentHouse
+from src.lab01.model import Property
+from src.lab03.models import Apartment, House, PentHouse
 
-def get_only_apartments(self) -> "Agency":
-    result = Agency(self._name + "_apartments")
-
-    for item in self._items:
-        if isinstance(item, Apartment):
-            result.add(item)
-
-    return result
 
 class Agency:
     def __init__(self, name: str):
