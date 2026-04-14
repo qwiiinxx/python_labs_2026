@@ -1,4 +1,14 @@
 from .model import Property
+from lab03.models import Apartment, House, PentHouse
+
+def get_only_apartments(self) -> "Agency":
+    result = Agency(self._name + "_apartments")
+
+    for item in self._items:
+        if isinstance(item, Apartment):
+            result.add(item)
+
+    return result
 
 class Agency:
     def __init__(self, name: str):
@@ -113,5 +123,33 @@ class Agency:
         result = Agency(self._name + "_sale")
         for item in self._items:
             if item.for_rent == False:
+                result.add(item)
+        return result
+
+
+    #фильтрация только апартаменты для ЛР-3
+    def get_only_apartments(self) -> "Agency":
+        result = Agency(self._name + "_apartments")
+
+        for item in self._items:
+            if isinstance(item, Apartment):
+                result.add(item)
+        return result
+
+    #фильтрация только дома для ЛР-3
+    def get_only_houses(self) -> "Agency":
+        result = Agency(self._name + "_houses")
+
+        for item in self._items:
+            if isinstance(item, House):
+                result.add(item)
+        return result
+
+    #фильтрация только пентхаусы для ЛР-3
+    def get_only_penthouses(self) -> "Agency":
+        result = Agency(self._name + "_penthouses")
+
+        for item in self._items:
+            if isinstance(item, PentHouse):
                 result.add(item)
         return result
