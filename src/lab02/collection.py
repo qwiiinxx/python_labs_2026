@@ -1,6 +1,6 @@
 from src.lab01.model import Property
 from src.lab03.models import Apartment, House, PentHouse
-
+from src.lab04.interfaces import Calculatable, Printable
 
 class Agency:
     def __init__(self, name: str):
@@ -143,5 +143,22 @@ class Agency:
 
         for item in self._items:
             if isinstance(item, PentHouse):
+                result.add(item)
+        return result
+
+
+
+    #=== фильтрация по интерфейсу для ЛР-4 ===
+    def get_printable(self) -> "Agency":
+        result = Agency(self._name + "_printable")
+        for item in self._items:
+            if isinstance(item, Printable):
+                result.add(item)
+        return result
+
+    def get_calculatable(self) -> "Agency":
+        result = Agency(self._name + "_calculatable")
+        for item in self._items:
+            if isinstance(item, Calculatable):
                 result.add(item)
         return result
