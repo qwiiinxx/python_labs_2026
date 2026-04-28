@@ -15,7 +15,7 @@ def by_per_metr(item):
 # фильтры
 def is_expensive(item):
     """Дорогие объекты > 30 млн"""
-    return item.prive > 30_000_000
+    return item.price > 30_000_000
 
 def is_cheap(item):
     """Дешевые объекты < 30 млн"""
@@ -28,7 +28,7 @@ def is_for_rent(item):
 
 
 # фабрика функций
-def make_prise_filter(max_price):
+def make_price_filter(max_price):
     """Создает фильтр по макс. цене"""
     def filter_fn(item):
         return item.price <= max_price
@@ -45,13 +45,28 @@ def to_str(item):
     return str(item)
 # =================================
 
+# стратегии
 class DiscountStrategy:
-    """Стратегия СКИДКА"""
+    """Стратегия: скидка"""
+
+    def __init__(self, percent: float):
+        self._percent = percent
+
     def __call__(self, item):
-        return item.price * 0,2
+        return item.price * (1 - self._percent / 100)
+
 
 class TaxStrategy:
-    """Стратегия НАЛОГ"""
+    """Стратегия: налог"""
+
+    def __init__(self, percent: float):
+        self._percent = percent
+
     def __call__(self, item):
-        return item.price * 0,1
-# ================================
+        return item.price * (1 + self._percent / 100)
+# ===================================================
+
+# ...
+def apply(self, func):
+    return [func(item) for item in self._items]
+# =============================================
