@@ -29,6 +29,14 @@ class Property:
     @property
     def is_active(self) -> bool:
         return self._is_active
+    
+    @property
+    def for_rent(self) -> bool:
+        return self._for_rent
+
+    @property
+    def rent_terms(self) -> int | None:
+        return self._rent_terms
 
     def activate(self) -> None:
         self._is_active = True

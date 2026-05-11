@@ -62,4 +62,3 @@ def validate_rent_logic(for_rent, rent_terms) -> int | None:
         if rent_terms is not None:
             raise ValueError("Объект на продаже, его нельзя арендовать")
         return None
-

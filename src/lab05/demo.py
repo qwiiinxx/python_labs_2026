@@ -11,15 +11,15 @@ from src.lab05.strategies import (
     TaxStrategy
 )
 
-from src.lab03.models import Apartments, House, PentHouse
+from src.lab03.models import Apartment, House, PentHouse
 
 
 # ==========================================
 # СОЗДАНИЕ ОБЪЕКТОВ
 
-flat1 = Apartments(10_000_000, 45, ["Ленина", 10], True, 12, 3, True, 2)
-flat2 = Apartments(25_000_000, 70, ["Пушкина", 5], False, None, 5, False, 3)
-flat3 = Apartments(15_000_000, 55, ["Гагарина", 7], True, 6, 2, True, 2)
+flat1 = Apartment(10_000_000, 45, ["Ленина", 10], True, 12, 3, True, 2)
+flat2 = Apartment(25_000_000, 70, ["Пушкина", 5], False, None, 5, False, 3)
+flat3 = Apartment(15_000_000, 55, ["Гагарина", 7], True, 6, 2, True, 2)
 
 house1 = House(40_000_000, 120, ["Садовая", 1], False, None, 2, True, 300, 5)
 house2 = House(18_000_000, 90, ["Полевая", 12], True, 24, 1, False, 200, 4)
