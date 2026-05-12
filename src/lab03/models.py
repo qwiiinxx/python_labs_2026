@@ -31,6 +31,18 @@ class Apartment(Property):
     def calculate(self) -> float:
         return self.tax_price(5)
 
+    # ДОБАВЛЕНИЕ ИЗ ЛР-6
+    def display(self) -> str:
+        return (
+            f"Квартира: {self.adress}, "
+            f"{self.area} м², "
+            f"{self.price} руб."
+        )
+
+    def score(self) -> float:
+        return self.price / self.area
+    
+
 
 class House(Property):
     def __init__(
@@ -66,6 +78,17 @@ class House(Property):
     def calculate(self) -> float:
         return self.tax_price(10)
 
+    # ДОБАВЛЕНИЕ ИЗ ЛР-6
+    def display(self) -> str:
+        return (
+            f"Дом: {self.adress}, "
+            f"{self.area} м², "
+            f"{self.price} руб."
+        )
+
+    def score(self) -> float:
+        return self.price / self.area + 50000
+
 
 class PentHouse(Property):
     def __init__(
@@ -96,4 +119,16 @@ class PentHouse(Property):
 
     def calculate(self) -> float:
         return self.tax_price(15)
+
+    # ДОБАВЛЕНИЕ ИЗ ЛР-6
+    def display(self) -> str:
+        return (
+            f"Пентхаус: {self.adress}, "
+            f"{self.area} м², "
+            f"{self.price} руб."
+        )
+
+    def score(self) -> float:
+        return self.price / self.area + 150000
+
 
