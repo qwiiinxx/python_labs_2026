@@ -1,13 +1,13 @@
 class DuplicateItemError(Exception):
-    """Объект уже существует в коллекции."""
+    """Объект уже существует в коллекции"""
     pass
 
 
 class ItemNotFoundError(Exception):
-    """Объект не найден."""
+    """Объект не найден"""
     pass
 
 
 class InvalidMenuChoiceError(Exception):
-    """Неверный пункт меню."""
+    """Неверный пункт меню"""
     pass
