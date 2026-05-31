@@ -205,6 +205,9 @@ python3 -m src.lab07.main
 
 ---
 
+### 5. Задание видео *
+[![asciinema](https://asciinema.org/a/65l2kJiVeu7gGwDz)](https://asciinema.org/a/65l2kJiVeu7gGwDz)
+
 # 5. Вывод
 
 В ходе лабораторной работы были изучены:
